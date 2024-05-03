@@ -5,7 +5,10 @@ type TProduct = {
     description: string,
     image: string,
     slug: string,
-    price: number,
+    price: {
+        amount: number,
+        currency: string
+    },
     quantity: number,
     isFeatured: boolean,
     isInStock: boolean,

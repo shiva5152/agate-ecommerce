@@ -5,8 +5,14 @@ const ProductSchema = new mongoose.Schema<TProduct>({
     name: String,
     description: String,
     image: String,
-    slug: String,
-    price: Number,
+    slug: {
+        type: String,
+        unique: true,
+    },
+    price: {
+        amount: Number,
+        currency: String,
+    },
     quantity: Number,
     isFeatured: Boolean,
     isInStock: Boolean,
